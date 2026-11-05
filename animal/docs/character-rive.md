@@ -1,7 +1,7 @@
 # 12지신 캐릭터 · 홈 방 구현 가이드 (프론트)
 
 사주를 입력하면 그 사람의 띠(`zodiac`)와 오행(`element`)이 정해지고, 그 두 값으로 캐릭터 애니메이션(`.riv`)과 홈 방 이미지를 고릅니다.
-이 폴더는 `frontend/` 레포와 같은 구조라서 그대로 합치면 됩니다.
+리소스는 레포의 `animal/` 폴더에 모아 두었습니다. 안의 `public/`, `src/`는 Next.js 프로젝트와 같은 구조라서, 프론트 앱의 같은 위치로 옮겨 쓰면 됩니다.
 
 움직이는 참고 화면(웹 시안): https://claude.ai/artifact/P2sEhDJV81eoHUtcBJDQsp
 
@@ -28,12 +28,12 @@ src/
 
 ## 2. 적용 방법
 
-1. `public/`을 레포의 `frontend/public/`에 합칩니다.
-2. `src/`의 파일 4개를 같은 위치에 넣습니다.
+1. `animal/public/`의 폴더들을 프론트 앱의 `public/`에 넣습니다.
+2. `animal/src/`의 파일 4개를 프론트 앱의 `src/` 같은 위치에 넣습니다.
 3. Rive 런타임을 설치합니다. (리소스 PR에는 `package.json`이 없어서, 프론트 코드가 올라간 뒤 한 번 설치해 주세요)
 
 ```bash
-cd frontend
+# 프론트 앱 폴더에서
 npm install @rive-app/react-canvas
 ```
 
